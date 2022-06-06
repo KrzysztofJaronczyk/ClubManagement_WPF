@@ -5,90 +5,103 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ClubManagement"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Club Management" 
+         MinHeight="450"
+        MinWidth="800"
+        Height="450" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="46*"/>
-            <ColumnDefinition Width="77*"/>
-            <ColumnDefinition Width="37*"/>
+            <ColumnDefinition Width="14*"/>
+            <ColumnDefinition Width="Auto" MinWidth="395"/>
+            <ColumnDefinition Width="14*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="27*"/>
-            <RowDefinition Height="130*"/>
-            <RowDefinition Height="60*"/>
+            <RowDefinition Height="64.0017571059432"/>
+            <RowDefinition Height="82*"/>
+            <RowDefinition Height="81*"/>
+            <RowDefinition Height="82*"/>
+            <RowDefinition Height="125*"/>
         </Grid.RowDefinitions>
-        <TextBlock x:Name="Title" HorizontalAlignment="Left" Margin="5,10,0,0" TextWrapping="Wrap" Text="Welcome to Club Management" VerticalAlignment="Top" FontSize="24" ScrollViewer.HorizontalScrollBarVisibility="Auto" Grid.Column="1"/>
-        <Image x:Name="ball" Height="42" Margin="250,5,98,0" VerticalAlignment="Top" Source="/ball.png" ScrollViewer.HorizontalScrollBarVisibility="Auto" Grid.ColumnSpan="2" Grid.Column="1"/>
-        <Button x:Name="AddPlayer" Content="Add a new player" HorizontalAlignment="Center" Margin="0,35,0,0" Grid.Row="1" VerticalAlignment="Top" BorderBrush="#FF095211" Height="50" Width="134" FontSize="16">
+        <TextBlock x:Name="Title" Margin="6,10,10,22" TextWrapping="Wrap" Text="Welcome to Club Management" FontSize="24" ScrollViewer.HorizontalScrollBarVisibility="Auto" Grid.Column="1" FontWeight="Bold"/>
+        <Image x:Name="ball" Margin="386,5,0,10" Source="/ball.png" ScrollViewer.HorizontalScrollBarVisibility="Auto" Grid.Column="1" HorizontalAlignment="Left" Width="54" Grid.ColumnSpan="2"/>
+        <Button x:Name="AddPlayer" Content="Add a new player" Grid.Row="1" BorderBrush="#FF095211" FontSize="16" Margin="34,16,34,16">
             <Button.Background>
                 <SolidColorBrush Color="#FF1AAB29" Opacity="0.8"/>
             </Button.Background>
         </Button>
-        <Button x:Name="AddPlayer_Copy" Content="Add a new trainer" HorizontalAlignment="Center" Margin="0,113,0,0" Grid.Row="1" VerticalAlignment="Top" BorderBrush="#FF095211" Height="50" Width="134" FontSize="16">
+        <Button x:Name="AddPlayer_Copy" Content="Add a new trainer" Margin="34,16,34,15" Grid.Row="2" BorderBrush="#FF095211" FontSize="16">
             <Button.Background>
                 <SolidColorBrush Color="#FF1AAB29" Opacity="0.8"/>
             </Button.Background>
         </Button>
-        <Button x:Name="AddPlayer_Copy1" Content="Delete player" HorizontalAlignment="Center" Margin="0,35,0,0" Grid.Row="1" VerticalAlignment="Top" BorderBrush="#FF095211" Height="50" Width="134" FontSize="16" Grid.Column="2">
+        <Button x:Name="AddPlayer_Copy1" Content="Delete player" Grid.Row="1" BorderBrush="#FF095211" FontSize="16" Grid.Column="2" Click="AddPlayer_Copy1_Click" Margin="34,16,34,16">
             <Button.Background>
                 <SolidColorBrush Color="#FF1AAB29" Opacity="0.8"/>
             </Button.Background>
         </Button>
-        <Button x:Name="AddPlayer_Copy2" Content="Delete trainer" HorizontalAlignment="Center" Margin="0,113,0,0" Grid.Row="1" VerticalAlignment="Top" BorderBrush="#FF095211" Height="50" Width="134" FontSize="16" Grid.Column="2">
+        <Button x:Name="AddPlayer_Copy2" Content="Delete trainer" Grid.Row="2" BorderBrush="#FF095211" FontSize="16" Grid.Column="2" Margin="34,16,34,15">
             <Button.Background>
                 <SolidColorBrush Color="#FF1AAB29" Opacity="0.8"/>
             </Button.Background>
         </Button>
-        <Button x:Name="AddPlayer_Copy3" Content="Delete entire club" HorizontalAlignment="Center" Margin="0,60,0,0" Grid.Row="2" VerticalAlignment="Top" BorderBrush="#FF095211" Height="50" Width="134" FontSize="16" Grid.Column="2">
+        <Button x:Name="AddPlayer_Copy3" Content="Delete entire club" Margin="34,60,34,15" Grid.Row="4" BorderBrush="#FF095211" FontSize="16" Grid.Column="2">
             <Button.Background>
                 <SolidColorBrush Color="#FFAB561A" Opacity="0.8"/>
             </Button.Background>
         </Button>
-        <Button x:Name="AddPlayer_Copy4" Content="Browse your team players" HorizontalAlignment="Center" Margin="0,35,0,0" Grid.Row="1" VerticalAlignment="Top" BorderBrush="#FF095211" Height="50" Width="214" FontSize="16" Grid.Column="1">
+        <Button x:Name="AddPlayer_Copy4" Content="Browse your team players" Grid.Row="1" BorderBrush="#FF095211" FontSize="16" Grid.Column="1" Margin="92,16,90,16">
             <Button.Background>
                 <SolidColorBrush Color="#FF1AAB29" Opacity="0.8"/>
             </Button.Background>
         </Button>
-        <Button x:Name="AddPlayer_Copy5" Content="Add a training" HorizontalAlignment="Center" Margin="0,183,0,0" Grid.Row="1" VerticalAlignment="Top" BorderBrush="#FF095211" Height="50" Width="134" FontSize="16">
+        <Button x:Name="AddPlayer_Copy5" Content="Add a training" Margin="34,17,34,15" Grid.Row="3" BorderBrush="#FF095211" FontSize="16">
             <Button.Background>
                 <SolidColorBrush Color="#FF1AAB29" Opacity="0.8"/>
             </Button.Background>
         </Button>
-        <Button x:Name="AddPlayer_Copy6" Content="Browse training schedule" HorizontalAlignment="Center" Margin="0,183,0,0" Grid.Row="1" VerticalAlignment="Top" BorderBrush="#FF095211" Height="50" Width="214" FontSize="16" Grid.Column="1">
+        <Button x:Name="AddPlayer_Copy6" Content="Browse training schedule" HorizontalAlignment="Center" Grid.Row="3" BorderBrush="#FF095211" Width="214" FontSize="16" Grid.Column="1" Margin="0,16,0,16">
             <Button.Background>
                 <SolidColorBrush Color="#FF1AAB29" Opacity="0.8"/>
             </Button.Background>
         </Button>
-        <Button x:Name="AddPlayer_Copy7" Content="Browse team trainers" HorizontalAlignment="Center" Margin="0,113,0,0" Grid.Row="1" VerticalAlignment="Top" BorderBrush="#FF095211" Height="50" Width="214" FontSize="16" Grid.Column="1">
+
+        <Button x:Name="AddPlayer_Copy7" Content="Browse team trainers" Grid.Row="2" BorderBrush="#FF095211" FontSize="16" Grid.Column="1" Margin="92,16,90,15">
             <Button.Background>
                 <SolidColorBrush Color="#FF1AAB29" Opacity="0.8"/>
             </Button.Background>
         </Button>
-        <Button x:Name="AddPlayer_Copy8" Content="Delete training" HorizontalAlignment="Center" Margin="0,183,0,0" Grid.Row="1" VerticalAlignment="Top" BorderBrush="#FF095211" Height="50" Width="134" FontSize="16" Grid.Column="2">
+        <Button x:Name="AddPlayer_Copy8" Content="Delete training" Grid.Row="3" BorderBrush="#FF095211" FontSize="16" Grid.Column="2" Margin="34,16,34,16">
             <Button.Background>
                 <SolidColorBrush Color="#FF1AAB29" Opacity="0.8"/>
             </Button.Background>
         </Button>
-        <ComboBox HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Top" Width="134" Height="40" Margin="0,45,0,0" FontSize="18" Opacity="0.8" BorderBrush="#FFCE1717">
+        <ComboBox Grid.Row="4" Margin="34,60,34,12" FontSize="18" Opacity="0.8" SelectionChanged="ComboBox_SelectionChanged" BorderBrush="#FFCE1717">
             <ComboBox.Background>
                 <LinearGradientBrush EndPoint="0,1">
                     <GradientStop Color="#FFF0F0F0"/>
                     <GradientStop Color="#FF16A21E" Offset="1"/>
                 </LinearGradientBrush>
             </ComboBox.Background>
+            <ListBoxItem Content="Edit players"/>
+            <ListBoxItem Content="Edit trainers"/>
+            <ListBoxItem Content="Edit trainings"/>
         </ComboBox>
-        <ComboBox Grid.Column="1" HorizontalAlignment="Center" Margin="0,18,0,0" Grid.Row="2" VerticalAlignment="Top" Width="136" Height="32"/>
-        <Button x:Name="AddPlayer_Copy9" Content="Save data to file" HorizontalAlignment="Left" Margin="40,60,0,0" Grid.Row="2" VerticalAlignment="Top" BorderBrush="#FF095211" Height="50" Width="144" FontSize="16" Grid.Column="1">
+        <ComboBox Grid.Column="1" HorizontalAlignment="Left" Margin="168,10,0,0" Grid.Row="4" VerticalAlignment="Top" Width="136" Height="32" FontSize="16">
+            <ListBoxItem Content="Wallpaper 1"/>
+            <ListBoxItem Content="Wallpaper 2"/>
+            <ListBoxItem Content="Wallpaper 3"/>
+        </ComboBox>
+        <Button x:Name="AddPlayer_Copy9" Content="Save data to file" Margin="22,60,218,12" Grid.Row="4" BorderBrush="#FF095211" FontSize="16" Grid.Column="1">
             <Button.Background>
                 <SolidColorBrush Color="#FF1AAB29" Opacity="0.8"/>
             </Button.Background>
         </Button>
-        <Button x:Name="AddPlayer_Copy10" Content="Open data from file" HorizontalAlignment="Left" Margin="210,60,0,0" Grid.Row="2" VerticalAlignment="Top" BorderBrush="#FF095211" Height="50" Width="155" FontSize="16" Grid.Column="1">
+        <Button x:Name="AddPlayer_Copy10" Content="Open data from file" Margin="218,60,22,12" Grid.Row="4" BorderBrush="#FF095211" FontSize="16" Grid.Column="1">
             <Button.Background>
                 <SolidColorBrush Color="#FF1AAB29" Opacity="0.8"/>
             </Button.Background>
         </Button>
-        <MediaElement x:Name="mediaElement" Source="/Footballmanagement.mp4" LoadedBehavior="Play" Stretch="Fill" MediaEnded="mediaElement_MediaEnded" MediaOpened="mediaElement_MediaOpened" Visibility="Hidden" Grid.RowSpan="3" Grid.ColumnSpan="3" />
-
+        <TextBlock x:Name="WallPaperInfo" Grid.Column="1" HorizontalAlignment="Left" Margin="90,15,0,0" Grid.Row="4" TextWrapping="Wrap" Text="Wallpaper" VerticalAlignment="Top" FontSize="17" Height="23" Width="76"/>
+        <MediaElement x:Name="mediaElement" Source="C:\Users\Admin\Desktop\Projekt\ClubManagement\Footballmanagement.mp4" LoadedBehavior="Play" Stretch="Fill" MediaEnded="mediaElement_MediaEnded" MediaOpened="mediaElement_MediaOpened" Visibility="Hidden" Grid.RowSpan="5" Grid.ColumnSpan="3" />
     </Grid>
 </Window>
