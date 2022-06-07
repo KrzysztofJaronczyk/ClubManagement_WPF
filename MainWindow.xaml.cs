@@ -20,7 +20,7 @@ namespace ClubManagement
         {
             InitializeComponent();
         }
-
+        PlayerWindow subWindow;
 
 
         private void mediaElement_MediaEnded(object sender, RoutedEventArgs e)
@@ -44,6 +44,68 @@ namespace ClubManagement
 
         private void AddPlayer_Copy1_Click(object sender, RoutedEventArgs e)
         {
+
+        }
+
+        private void WallpaperBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            switch (WallpaperBox.SelectedIndex)
+            {
+                case 0:
+                    image2.Visibility = Visibility.Hidden;
+                    image3.Visibility = Visibility.Hidden;
+                    image1.Visibility = Visibility.Visible;
+                    break;
+                case 1:
+                    image1.Visibility = Visibility.Hidden;
+                    image3.Visibility = Visibility.Hidden;
+                    image2.Visibility = Visibility.Visible;
+                    break;
+                case 2:
+                    image1.Visibility = Visibility.Hidden;
+                    image2.Visibility = Visibility.Hidden;
+                    image3.Visibility = Visibility.Visible;
+                    break;
+            }
+        }
+
+        private void AddPlayer_Click(object sender, RoutedEventArgs e)
+        {
+            //if (PlayerName.Text == "" || PlayerAge.Text == "" || PlayerHeight.Text == "" || PlayerWeight.Text == "" || PlayerPosition.Text == "" || PlayerNumber.Text == "")
+            //{
+            //    MessageBox.Show("Please fill all the fields");
+            //}
+            //else
+            //{
+            //    string name = PlayerName.Text;
+            //    int age = Convert.ToInt32(PlayerAge.Text);
+            //    int height = Convert.ToInt32(PlayerHeight.Text);
+            //    int weight = Convert.ToInt32(PlayerWeight.Text);
+            //    string position = PlayerPosition.Text;
+            //    int number = Convert.ToInt32(PlayerNumber.Text);
+            //    Player player = new Player(name, age, height, weight, position, number);
+            //    player.Save();
+            //    MessageBox.Show("Player added successfully");
+            //}
+
+
+            if (subWindow != null)
+            {
+                subWindow.Close();
+                subWindow = null;
+            }
+            else
+            {
+                subWindow = new PlayerWindow();
+
+                subWindow.Show();
+            }
+
+
+
+
+
+
 
         }
     }

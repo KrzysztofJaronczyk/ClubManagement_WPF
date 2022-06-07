@@ -22,9 +22,14 @@
             <RowDefinition Height="82*"/>
             <RowDefinition Height="125*"/>
         </Grid.RowDefinitions>
-        <TextBlock x:Name="Title" Margin="6,10,10,22" TextWrapping="Wrap" Text="Welcome to Club Management" FontSize="24" ScrollViewer.HorizontalScrollBarVisibility="Auto" Grid.Column="1" FontWeight="Bold"/>
+
+        <Image x:Name="image1" Grid.RowSpan="6" Source="/image1.jpg" Stretch="Fill" Visibility="Hidden" Margin="0,-1,0,-2" StretchDirection="Both" Grid.ColumnSpan="3"/>
+        <Image x:Name="image2" Grid.RowSpan="6" Source="/image2.jpg" Stretch="Fill" Visibility="Visible" Margin="0,-1,0,-2" StretchDirection="Both" Grid.ColumnSpan="3"/>
+        <Image x:Name="image3" Grid.RowSpan="6" Source="/image3.jpg" Stretch="Fill" Visibility="Hidden" Margin="0,-1,0,-2" StretchDirection="Both" Grid.ColumnSpan="3"/>
+
+        <TextBlock x:Name="Title" Margin="6,10,10,22" TextWrapping="Wrap" Text="Welcome to Club Management" FontSize="24" ScrollViewer.HorizontalScrollBarVisibility="Auto" Grid.Column="1" FontWeight="Bold" Foreground="#FFE6E1E1"/>
         <Image x:Name="ball" Margin="386,5,0,10" Source="/ball.png" ScrollViewer.HorizontalScrollBarVisibility="Auto" Grid.Column="1" HorizontalAlignment="Left" Width="54" Grid.ColumnSpan="2"/>
-        <Button x:Name="AddPlayer" Content="Add a new player" Grid.Row="1" BorderBrush="#FF095211" FontSize="16" Margin="34,16,34,16">
+        <Button x:Name="AddPlayer" Content="Add a new player" Grid.Row="1" BorderBrush="#FF095211" FontSize="16" Margin="34,16,34,16" Click="AddPlayer_Click">
             <Button.Background>
                 <SolidColorBrush Color="#FF1AAB29" Opacity="0.8"/>
             </Button.Background>
@@ -86,7 +91,7 @@
             <ListBoxItem Content="Edit trainers"/>
             <ListBoxItem Content="Edit trainings"/>
         </ComboBox>
-        <ComboBox Grid.Column="1" HorizontalAlignment="Left" Margin="168,10,0,0" Grid.Row="4" VerticalAlignment="Top" Width="136" Height="32" FontSize="16">
+        <ComboBox x:Name="WallpaperBox" Grid.Column="1" HorizontalAlignment="Left" Margin="178,10,0,0" Grid.Row="4" VerticalAlignment="Top" Width="136" Height="32" FontSize="16" SelectionChanged="WallpaperBox_SelectionChanged">
             <ListBoxItem Content="Wallpaper 1"/>
             <ListBoxItem Content="Wallpaper 2"/>
             <ListBoxItem Content="Wallpaper 3"/>
@@ -101,7 +106,9 @@
                 <SolidColorBrush Color="#FF1AAB29" Opacity="0.8"/>
             </Button.Background>
         </Button>
-        <TextBlock x:Name="WallPaperInfo" Grid.Column="1" HorizontalAlignment="Left" Margin="90,15,0,0" Grid.Row="4" TextWrapping="Wrap" Text="Wallpaper" VerticalAlignment="Top" FontSize="17" Height="23" Width="76"/>
-        <MediaElement x:Name="mediaElement" Source="C:\Users\Admin\Desktop\Projekt\ClubManagement\Footballmanagement.mp4" LoadedBehavior="Play" Stretch="Fill" MediaEnded="mediaElement_MediaEnded" MediaOpened="mediaElement_MediaOpened" Visibility="Hidden" Grid.RowSpan="5" Grid.ColumnSpan="3" />
+        <TextBlock x:Name="WallPaperInfo" Grid.Column="1" HorizontalAlignment="Left" Margin="86,15,0,0" Grid.Row="4" TextWrapping="Wrap" Text="Wallpaper" VerticalAlignment="Top" FontSize="16" Height="23" Width="88" FontWeight="Bold"/>
+        <MediaElement x:Name="mediaElement" Source="C:\Users\Admin\Desktop\ClubManagement\Footballmanagement.mp4" LoadedBehavior="Play" Stretch="Fill" MediaEnded="mediaElement_MediaEnded" MediaOpened="mediaElement_MediaOpened" Visibility="Hidden" Grid.RowSpan="5" Grid.ColumnSpan="3" />
+
+
     </Grid>
 </Window>
