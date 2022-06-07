@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ClubManagement"
         mc:Ignorable="d"
-        MaxHeight="293"
+        MaxHeight="315"
         MaxWidth="420"
-        Title="PlayerWindow" Height="293" Width="420">
+        Title="PlayerWindow" Height="315" Width="420">
 
     <Grid Margin="0,0,0,-6">
         <Grid.RowDefinitions>
@@ -21,7 +21,7 @@
         </Grid.Background>
 
         <TextBlock x:Name="Name" HorizontalAlignment="Left" Margin="10,36,0,0" TextWrapping="Wrap" Text="Name: " VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Height="22" Width="56"/>
-        <TextBlock x:Name="Name_Copy" HorizontalAlignment="Left" Margin="10,108,0,0" TextWrapping="Wrap" Text="Surname: " VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Height="22" Width="79"/>
+        <TextBlock x:Name="Name_Copy" HorizontalAlignment="Left" Margin="10,91,0,0" TextWrapping="Wrap" Text="Surname: " VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Height="22" Width="79"/>
         <TextBox x:Name="NameBox" HorizontalAlignment="Left" Margin="90,30,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="145" Height="34" TextAlignment="Center">
             <TextBox.Background>
                 <RadialGradientBrush>
@@ -30,9 +30,9 @@
                 </RadialGradientBrush>
             </TextBox.Background>
         </TextBox>
-        <Image HorizontalAlignment="Left" Height="254" Margin="260,0,0,0" VerticalAlignment="Top" Width="166" Source="/player.jpg" RenderTransformOrigin="0.733,0.502"/>
-        <TextBlock x:Name="Name_Copy1" HorizontalAlignment="Left" Margin="6,174,0,0" TextWrapping="Wrap" Text="Function: " VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Height="21" Width="78"/>
-        <TextBox x:Name="NameBox_Copy" HorizontalAlignment="Left" Margin="90,102,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="145" Height="34" TextAlignment="Center">
+        <Image HorizontalAlignment="Left" Height="347" Margin="260,0,0,0" VerticalAlignment="Top" Width="180" Source="/player.jpg" RenderTransformOrigin="0.733,0.502"/>
+        <TextBlock x:Name="Name_Copy1" HorizontalAlignment="Left" Margin="10,201,0,0" TextWrapping="Wrap" Text="Function: " VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Height="21" Width="78"/>
+        <TextBox x:Name="NameBox_Copy" HorizontalAlignment="Left" Margin="90,85,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="145" Height="34" TextAlignment="Center">
             <TextBox.Background>
                 <RadialGradientBrush>
                     <GradientStop Color="#FFA6D663" Offset="0.35"/>
@@ -40,7 +40,7 @@
                 </RadialGradientBrush>
             </TextBox.Background>
         </TextBox>
-        <TextBox x:Name="NameBox_Copy1" HorizontalAlignment="Left" Margin="90,167,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="145" Height="34" TextAlignment="Center">
+        <TextBox x:Name="NameBox_Copy1" HorizontalAlignment="Left" Margin="90,195,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="145" Height="34" TextAlignment="Center">
             <TextBox.Background>
                 <RadialGradientBrush>
                     <GradientStop Color="#FFA6D663" Offset="0.35"/>
@@ -48,7 +48,7 @@
                 </RadialGradientBrush>
             </TextBox.Background>
         </TextBox>
-        <Button x:Name="SaveButton" Content="Save" HorizontalAlignment="Left" Margin="100,219,0,0" VerticalAlignment="Top" Width="125" Height="26">
+        <Button x:Name="SaveButton" Content="Add" HorizontalAlignment="Left" Margin="100,247,0,0" VerticalAlignment="Top" Width="125" Height="26">
             <Button.Background>
                 <RadialGradientBrush>
                     <GradientStop Color="#FFA6D663" Offset="0.35"/>
@@ -56,6 +56,15 @@
                 </RadialGradientBrush>
             </Button.Background>
         </Button>
+        <TextBox x:Name="NameBox_Copy2" HorizontalAlignment="Left" Margin="90,142,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="145" Height="34" TextAlignment="Center">
+            <TextBox.Background>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FFA6D663" Offset="0.35"/>
+                    <GradientStop Color="#FF68863F" Offset="1"/>
+                </RadialGradientBrush>
+            </TextBox.Background>
+        </TextBox>
+        <TextBlock x:Name="Name_Copy2" HorizontalAlignment="Left" Margin="10,148,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Height="21" Width="78"><Run Language="pl-pl" Text="Skill lv.:"/><LineBreak/><Run Language="pl-pl"/><Run Text=": "/></TextBlock>
 
     </Grid>
 </Window>

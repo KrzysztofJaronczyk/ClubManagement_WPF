@@ -11,9 +11,9 @@
         Height="450" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="14*"/>
+            <ColumnDefinition Width="10*"/>
             <ColumnDefinition Width="Auto" MinWidth="395"/>
-            <ColumnDefinition Width="14*"/>
+            <ColumnDefinition Width="10*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="64.0017571059432"/>
@@ -34,48 +34,23 @@
                 <SolidColorBrush Color="#FF1AAB29" Opacity="0.8"/>
             </Button.Background>
         </Button>
-        <Button x:Name="AddPlayer_Copy" Content="Add a new trainer" Margin="34,16,34,15" Grid.Row="2" BorderBrush="#FF095211" FontSize="16">
-            <Button.Background>
-                <SolidColorBrush Color="#FF1AAB29" Opacity="0.8"/>
-            </Button.Background>
-        </Button>
-        <Button x:Name="AddPlayer_Copy1" Content="Delete player" Grid.Row="1" BorderBrush="#FF095211" FontSize="16" Grid.Column="2" Click="AddPlayer_Copy1_Click" Margin="34,16,34,16">
-            <Button.Background>
-                <SolidColorBrush Color="#FF1AAB29" Opacity="0.8"/>
-            </Button.Background>
-        </Button>
-        <Button x:Name="AddPlayer_Copy2" Content="Delete trainer" Grid.Row="2" BorderBrush="#FF095211" FontSize="16" Grid.Column="2" Margin="34,16,34,15">
-            <Button.Background>
-                <SolidColorBrush Color="#FF1AAB29" Opacity="0.8"/>
-            </Button.Background>
-        </Button>
         <Button x:Name="AddPlayer_Copy3" Content="Delete entire club" Margin="34,60,34,15" Grid.Row="4" BorderBrush="#FF095211" FontSize="16" Grid.Column="2">
             <Button.Background>
                 <SolidColorBrush Color="#FFAB561A" Opacity="0.8"/>
             </Button.Background>
         </Button>
-        <Button x:Name="AddPlayer_Copy4" Content="Browse your team players" Grid.Row="1" BorderBrush="#FF095211" FontSize="16" Grid.Column="1" Margin="92,16,90,16">
+        <Button x:Name="AddPlayer_Copy4" Content="Players window" Grid.Row="2" BorderBrush="#FF095211" FontSize="16" Margin="10,9,10,22">
             <Button.Background>
                 <SolidColorBrush Color="#FF1AAB29" Opacity="0.8"/>
             </Button.Background>
         </Button>
-        <Button x:Name="AddPlayer_Copy5" Content="Add a training" Margin="34,17,34,15" Grid.Row="3" BorderBrush="#FF095211" FontSize="16">
-            <Button.Background>
-                <SolidColorBrush Color="#FF1AAB29" Opacity="0.8"/>
-            </Button.Background>
-        </Button>
-        <Button x:Name="AddPlayer_Copy6" Content="Browse training schedule" HorizontalAlignment="Center" Grid.Row="3" BorderBrush="#FF095211" Width="214" FontSize="16" Grid.Column="1" Margin="0,16,0,16">
+        <Button x:Name="AddPlayer_Copy6" Content="Trainings window" Grid.Row="3" BorderBrush="#FF095211" FontSize="16" Grid.Column="1" Margin="0,22,0,10" HorizontalAlignment="Center" Width="182">
             <Button.Background>
                 <SolidColorBrush Color="#FF1AAB29" Opacity="0.8"/>
             </Button.Background>
         </Button>
 
-        <Button x:Name="AddPlayer_Copy7" Content="Browse team trainers" Grid.Row="2" BorderBrush="#FF095211" FontSize="16" Grid.Column="1" Margin="92,16,90,15">
-            <Button.Background>
-                <SolidColorBrush Color="#FF1AAB29" Opacity="0.8"/>
-            </Button.Background>
-        </Button>
-        <Button x:Name="AddPlayer_Copy8" Content="Delete training" Grid.Row="3" BorderBrush="#FF095211" FontSize="16" Grid.Column="2" Margin="34,16,34,16">
+        <Button x:Name="AddPlayer_Copy7" Content="Trainers window" Grid.Row="2" BorderBrush="#FF095211" FontSize="16" Grid.Column="2" Margin="0,21,0,10" HorizontalAlignment="Center" Width="182">
             <Button.Background>
                 <SolidColorBrush Color="#FF1AAB29" Opacity="0.8"/>
             </Button.Background>
@@ -108,6 +83,11 @@
         </Button>
         <TextBlock x:Name="WallPaperInfo" Grid.Column="1" HorizontalAlignment="Left" Margin="86,15,0,0" Grid.Row="4" TextWrapping="Wrap" Text="Wallpaper" VerticalAlignment="Top" FontSize="16" Height="23" Width="88" FontWeight="Bold"/>
         <MediaElement x:Name="mediaElement" Source="C:\Users\Admin\Desktop\ClubManagement\Footballmanagement.mp4" LoadedBehavior="Play" Stretch="Fill" MediaEnded="mediaElement_MediaEnded" MediaOpened="mediaElement_MediaOpened" Visibility="Hidden" Grid.RowSpan="5" Grid.ColumnSpan="3" />
+        <Button x:Name="AddPlayer_Copy" Content="Club window" Grid.Row="1" BorderBrush="#FF095211" FontSize="16" Grid.Column="1" Margin="104,16,108,16">
+            <Button.Background>
+                <SolidColorBrush Color="#FF1AAB29" Opacity="0.8"/>
+            </Button.Background>
+        </Button>
 
 
     </Grid>
