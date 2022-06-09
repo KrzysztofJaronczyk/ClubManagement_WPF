@@ -53,8 +53,17 @@
     <StartupObject>ClubManagement.App</StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -73,7 +82,24 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="DataGrid.xaml">
+    <Compile Include="ClubInformation.cs">
+      <DependentUpon>ClubManagementModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ClubManagementModels.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClubManagementModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Player.cs">
+      <DependentUpon>ClubManagementModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Trainer.cs">
+      <DependentUpon>ClubManagementModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Training.cs">
+      <DependentUpon>ClubManagementModels.tt</DependentUpon>
+    </Compile>
+    <Page Include="PlayerWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -85,22 +111,25 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="DataGrid.xaml.cs">
-      <DependentUpon>DataGrid.xaml</DependentUpon>
+    <Compile Include="ClubManagementModels.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClubManagementModels.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ClubManagementModels.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClubManagementModels.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="PlayerWindow.xaml.cs">
+      <DependentUpon>PlayerWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="PlayerWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PlayerWindow.xaml.cs">
-      <DependentUpon>PlayerWindow.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -118,6 +147,14 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EntityDeploy Include="ClubManagementModels.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ClubManagementModels.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ClubManagementModels.edmx.diagram">
+      <DependentUpon>ClubManagementModels.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -127,21 +164,33 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="ball.png" />
+    <Resource Include="Resources\ball.png" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="ClubManagementDB.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="ClubManagementDB_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>ClubManagementDB.mdf</DependentUpon>
     </Content>
-    <Content Include="Footballmanagement.mp4" />
-    <Resource Include="player.jpg" />
-    <Resource Include="image3.jpg" />
-    <Resource Include="image2.jpg" />
-    <Resource Include="image1.jpg" />
+    <Content Include="ClubManagementModels.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ClubManagementModels.Context.cs</LastGenOutput>
+      <DependentUpon>ClubManagementModels.edmx</DependentUpon>
+    </Content>
+    <Content Include="ClubManagementModels.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ClubManagementModels.edmx</DependentUpon>
+      <LastGenOutput>ClubManagementModels.cs</LastGenOutput>
+    </Content>
+    <Resource Include="Resources\CrudWindow.jpg" />
+    <Resource Include="CrudWindow.jpg" />
+    <Content Include="Resources\Footballmanagement.mp4" />
+    <Resource Include="Resources\player.jpg" />
+    <Resource Include="Resources\image3.jpg" />
+    <Resource Include="Resources\image2.jpg" />
+    <Resource Include="Resources\image1.jpg" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.8">
@@ -154,6 +203,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

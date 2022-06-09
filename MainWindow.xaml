@@ -23,13 +23,13 @@
             <RowDefinition Height="125*"/>
         </Grid.RowDefinitions>
 
-        <Image x:Name="image1" Grid.RowSpan="6" Source="/image1.jpg" Stretch="Fill" Visibility="Hidden" Margin="0,-1,0,-2" StretchDirection="Both" Grid.ColumnSpan="3"/>
-        <Image x:Name="image2" Grid.RowSpan="6" Source="/image2.jpg" Stretch="Fill" Visibility="Visible" Margin="0,-1,0,-2" StretchDirection="Both" Grid.ColumnSpan="3"/>
-        <Image x:Name="image3" Grid.RowSpan="6" Source="/image3.jpg" Stretch="Fill" Visibility="Hidden" Margin="0,-1,0,-2" StretchDirection="Both" Grid.ColumnSpan="3"/>
+        <Image x:Name="image1" Grid.RowSpan="6" Source="Resources/image1.jpg" Stretch="Fill" Visibility="Hidden" Margin="0,-1,0,-2" StretchDirection="Both" Grid.ColumnSpan="3"/>
+        <Image x:Name="image2" Grid.RowSpan="6" Source="Resources/image2.jpg" Stretch="Fill" Visibility="Visible" Margin="0,-1,0,-2" StretchDirection="Both" Grid.ColumnSpan="3"/>
+        <Image x:Name="image3" Grid.RowSpan="6" Source="Resources/image3.jpg" Stretch="Fill" Visibility="Hidden" Margin="0,-1,0,-2" StretchDirection="Both" Grid.ColumnSpan="3"/>
 
         <TextBlock x:Name="Title" Margin="6,10,10,22" TextWrapping="Wrap" Text="Welcome to Club Management" FontSize="24" ScrollViewer.HorizontalScrollBarVisibility="Auto" Grid.Column="1" FontWeight="Bold" Foreground="#FFE6E1E1"/>
-        <Image x:Name="ball" Margin="386,5,0,10" Source="/ball.png" ScrollViewer.HorizontalScrollBarVisibility="Auto" Grid.Column="1" HorizontalAlignment="Left" Width="54" Grid.ColumnSpan="2"/>
-        <Button x:Name="AddPlayer" Content="Add a new player" Grid.Row="1" BorderBrush="#FF095211" FontSize="16" Margin="34,16,34,16" Click="AddPlayer_Click">
+        <Image x:Name="ball" Margin="386,5,0,10" Source="Resources/ball.png" ScrollViewer.HorizontalScrollBarVisibility="Auto" Grid.Column="1" HorizontalAlignment="Left" Width="54" Grid.ColumnSpan="2"/>
+        <Button x:Name="AddPlayer" Content="Players window" Grid.Row="2" BorderBrush="#FF095211" FontSize="16" Margin="34,9,34,22" Click="AddPlayer_Click">
             <Button.Background>
                 <SolidColorBrush Color="#FF1AAB29" Opacity="0.8"/>
             </Button.Background>
@@ -39,12 +39,7 @@
                 <SolidColorBrush Color="#FFAB561A" Opacity="0.8"/>
             </Button.Background>
         </Button>
-        <Button x:Name="AddPlayer_Copy4" Content="Players window" Grid.Row="2" BorderBrush="#FF095211" FontSize="16" Margin="10,9,10,22">
-            <Button.Background>
-                <SolidColorBrush Color="#FF1AAB29" Opacity="0.8"/>
-            </Button.Background>
-        </Button>
-        <Button x:Name="AddPlayer_Copy6" Content="Trainings window" Grid.Row="3" BorderBrush="#FF095211" FontSize="16" Grid.Column="1" Margin="0,22,0,10" HorizontalAlignment="Center" Width="182">
+        <Button x:Name="AddPlayer_Copy6" Content="Trainings window" Grid.Row="2" BorderBrush="#FF095211" FontSize="16" Grid.Column="1" Margin="0,10,0,21" HorizontalAlignment="Center" Width="182">
             <Button.Background>
                 <SolidColorBrush Color="#FF1AAB29" Opacity="0.8"/>
             </Button.Background>
@@ -55,17 +50,6 @@
                 <SolidColorBrush Color="#FF1AAB29" Opacity="0.8"/>
             </Button.Background>
         </Button>
-        <ComboBox Grid.Row="4" Margin="34,60,34,12" FontSize="18" Opacity="0.8" SelectionChanged="ComboBox_SelectionChanged" BorderBrush="#FFCE1717">
-            <ComboBox.Background>
-                <LinearGradientBrush EndPoint="0,1">
-                    <GradientStop Color="#FFF0F0F0"/>
-                    <GradientStop Color="#FF16A21E" Offset="1"/>
-                </LinearGradientBrush>
-            </ComboBox.Background>
-            <ListBoxItem Content="Edit players"/>
-            <ListBoxItem Content="Edit trainers"/>
-            <ListBoxItem Content="Edit trainings"/>
-        </ComboBox>
         <ComboBox x:Name="WallpaperBox" Grid.Column="1" HorizontalAlignment="Left" Margin="178,10,0,0" Grid.Row="4" VerticalAlignment="Top" Width="136" Height="32" FontSize="16" SelectionChanged="WallpaperBox_SelectionChanged">
             <ListBoxItem Content="Wallpaper 1"/>
             <ListBoxItem Content="Wallpaper 2"/>
