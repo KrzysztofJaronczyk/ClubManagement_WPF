@@ -21,6 +21,7 @@ namespace ClubManagement
             InitializeComponent();
         }
         PlayerWindow subWindow;
+        TrainersWindow subWindow2;
 
 
         private void mediaElement_MediaEnded(object sender, RoutedEventArgs e)
@@ -71,24 +72,6 @@ namespace ClubManagement
 
         private void AddPlayer_Click(object sender, RoutedEventArgs e)
         {
-            //if (PlayerName.Text == "" || PlayerAge.Text == "" || PlayerHeight.Text == "" || PlayerWeight.Text == "" || PlayerPosition.Text == "" || PlayerNumber.Text == "")
-            //{
-            //    MessageBox.Show("Please fill all the fields");
-            //}
-            //else
-            //{
-            //    string name = PlayerName.Text;
-            //    int age = Convert.ToInt32(PlayerAge.Text);
-            //    int height = Convert.ToInt32(PlayerHeight.Text);
-            //    int weight = Convert.ToInt32(PlayerWeight.Text);
-            //    string position = PlayerPosition.Text;
-            //    int number = Convert.ToInt32(PlayerNumber.Text);
-            //    Player player = new Player(name, age, height, weight, position, number);
-            //    player.Save();
-            //    MessageBox.Show("Player added successfully");
-            //}
-
-
             if (subWindow != null)
             {
                 subWindow.Close();
@@ -100,13 +83,21 @@ namespace ClubManagement
 
                 subWindow.Show();
             }
+        }
 
+        private void AddPlayer_Copy7_Click(object sender, RoutedEventArgs e)//trainers
+        {
+            if (subWindow2 != null)
+            {
+                subWindow2.Close();
+                subWindow2 = null;
+            }
+            else
+            {
+                subWindow2 = new TrainersWindow();
 
-
-
-
-
-
+                subWindow2.Show();
+            }
         }
     }
 }

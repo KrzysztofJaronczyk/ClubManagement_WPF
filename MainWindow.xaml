@@ -45,7 +45,7 @@
             </Button.Background>
         </Button>
 
-        <Button x:Name="AddPlayer_Copy7" Content="Trainers window" Grid.Row="2" BorderBrush="#FF095211" FontSize="16" Grid.Column="2" Margin="0,21,0,10" HorizontalAlignment="Center" Width="182">
+        <Button x:Name="AddPlayer_Copy7" Content="Trainers window" Grid.Row="2" BorderBrush="#FF095211" FontSize="16" Grid.Column="2" Margin="0,21,0,10" HorizontalAlignment="Center" Width="182" Click="AddPlayer_Copy7_Click">
             <Button.Background>
                 <SolidColorBrush Color="#FF1AAB29" Opacity="0.8"/>
             </Button.Background>
