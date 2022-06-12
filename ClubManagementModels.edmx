@@ -39,8 +39,8 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="TrainingDate" Type="datetime" Nullable="false" />
-          <Property Name="TrainingPlace" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Date" Type="date" Nullable="false" />
+          <Property Name="Hour" Type="nvarchar" MaxLength="6" Nullable="false" />
         </EntityType>
         <EntityContainer Name="ClubManagementDBModelStoreContainer">
           <EntitySet Name="ClubInformation" EntityType="Self.ClubInformation" Schema="dbo" store:Type="Tables" />
@@ -86,8 +86,8 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="TrainingDate" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="TrainingPlace" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Hour" Type="String" Nullable="false" MaxLength="6" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityContainer Name="ClubManagementDBEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="ClubInformations" EntityType="Self.ClubInformation" />
@@ -136,9 +136,9 @@
           <EntitySetMapping Name="Trainings">
             <EntityTypeMapping TypeName="ClubManagementDBModel.Training">
               <MappingFragment StoreEntitySet="Trainings">
+                <ScalarProperty Name="Hour" ColumnName="Hour" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="TrainingDate" ColumnName="TrainingDate" />
-                <ScalarProperty Name="TrainingPlace" ColumnName="TrainingPlace" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

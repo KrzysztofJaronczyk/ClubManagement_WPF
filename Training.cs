@@ -15,7 +15,7 @@ namespace ClubManagement
     public partial class Training
     {
         public int Id { get; set; }
-        public System.DateTime TrainingDate { get; set; }
-        public string TrainingPlace { get; set; }
+        public System.DateTime Date { get; set; }
+        public string Hour { get; set; }
     }
 }

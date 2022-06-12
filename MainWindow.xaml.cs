@@ -22,6 +22,7 @@ namespace ClubManagement
         }
         PlayerWindow subWindow;
         TrainersWindow subWindow2;
+        TrainingsWindow subWindow3;
 
 
         private void mediaElement_MediaEnded(object sender, RoutedEventArgs e)
@@ -97,6 +98,21 @@ namespace ClubManagement
                 subWindow2 = new TrainersWindow();
 
                 subWindow2.Show();
+            }
+        }
+
+        private void AddPlayer_Copy6_Click(object sender, RoutedEventArgs e)
+        {
+            if (subWindow3 != null)
+            {
+                subWindow3.Close();
+                subWindow3 = null;
+            }
+            else
+            {
+                subWindow3 = new TrainingsWindow();
+
+                subWindow3.Show();
             }
         }
     }
