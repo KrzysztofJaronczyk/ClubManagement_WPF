@@ -1,17 +1,7 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using System.IO;
+
 namespace ClubManagement
 {
     public partial class MainWindow : Window
@@ -23,6 +13,7 @@ namespace ClubManagement
         PlayerWindow subWindow;
         TrainersWindow subWindow2;
         TrainingsWindow subWindow3;
+        ClubWindow subWindow4;
 
 
         private void mediaElement_MediaEnded(object sender, RoutedEventArgs e)
@@ -114,6 +105,36 @@ namespace ClubManagement
 
                 subWindow3.Show();
             }
+        }
+
+        private void AddPlayer_Copy_Click(object sender, RoutedEventArgs e)
+        {
+            if (subWindow4 != null)
+            {
+                subWindow4.Close();
+                subWindow4 = null;
+            }
+            else
+            {
+                subWindow4 = new ClubWindow();
+
+                subWindow4.Show();
+            }
+        }
+
+        private void ball_MouseEnter(object sender, System.Windows.Input.MouseEventArgs e)//ester egg
+        {
+            //ball.Margin = new Thickness(ball.Margin.Left + 10, ball.Margin.Top + 10, 0, 0);
+            double x = ball.Width;
+            ball.Width = x+1;
+            ball.Height = x + 1;
+        }
+
+        private void ball_Click(object sender, System.Windows.Input.MouseEventArgs e)//reset ester egg
+        {
+            //ball.Margin = new Thickness(ball.Margin.Left + 10, ball.Margin.Top + 10, 0, 0);
+            ball.Width = 50;
+            ball.Height = 50;
         }
     }
 }

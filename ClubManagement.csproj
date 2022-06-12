@@ -86,10 +86,23 @@
     <Compile Include="ClubInformation.cs">
       <DependentUpon>ClubManagementModels.tt</DependentUpon>
     </Compile>
+    <Compile Include="ClubManagementModels.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClubManagementModels.Context.tt</DependentUpon>
+    </Compile>
     <Compile Include="ClubManagementModels.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ClubManagementModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ClubManagementModels.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClubManagementModels.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="ClubWindow.xaml.cs">
+      <DependentUpon>ClubWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Player.cs">
       <DependentUpon>ClubManagementModels.tt</DependentUpon>
@@ -106,6 +119,10 @@
     <Compile Include="TrainingsWindow.xaml.cs">
       <DependentUpon>TrainingsWindow.xaml</DependentUpon>
     </Compile>
+    <Page Include="ClubWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="PlayerWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -117,16 +134,6 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="ClubManagementModels.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ClubManagementModels.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ClubManagementModels.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ClubManagementModels.edmx</DependentUpon>
     </Compile>
     <Compile Include="PlayerWindow.xaml.cs">
       <DependentUpon>PlayerWindow.xaml</DependentUpon>
@@ -189,18 +196,19 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>ClubManagementDB.mdf</DependentUpon>
     </Content>
+    <Resource Include="Resources\CrudWindow.jpg" />
+    <Resource Include="CrudWindow.jpg" />
     <Content Include="ClubManagementModels.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>ClubManagementModels.Context.cs</LastGenOutput>
       <DependentUpon>ClubManagementModels.edmx</DependentUpon>
+      <LastGenOutput>ClubManagementModels.Context.cs</LastGenOutput>
     </Content>
     <Content Include="ClubManagementModels.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>ClubManagementModels.edmx</DependentUpon>
       <LastGenOutput>ClubManagementModels.cs</LastGenOutput>
     </Content>
-    <Resource Include="Resources\CrudWindow.jpg" />
-    <Resource Include="CrudWindow.jpg" />
+    <Content Include="Footballmanagement.mp4" />
     <Content Include="Resources\Footballmanagement.mp4" />
     <Resource Include="Resources\player.jpg" />
     <Resource Include="Resources\image3.jpg" />

@@ -16,7 +16,7 @@ namespace ClubManagement
     {
         public int Id { get; set; }
         public string ClubName { get; set; }
-        public System.DateTime YearOfCreation { get; set; }
+        public int YearOfCreation { get; set; }
         public string City { get; set; }
     }
 }
