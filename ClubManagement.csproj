@@ -52,6 +52,9 @@
   <PropertyGroup>
     <StartupObject>ClubManagement.App</StartupObject>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>ball.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
@@ -189,6 +192,7 @@
     <Resource Include="Resources\ball.png" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="ball.ico" />
     <Content Include="ClubManagementDB.mdf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

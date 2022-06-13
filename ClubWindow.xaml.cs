@@ -194,7 +194,7 @@ namespace ClubManagement
 
 
             Thickness margin = ball.Margin;
-            margin.Left = margin.Left + randomValue;
+            margin.Left = margin.Left - randomValue2;
             margin.Top = margin.Top + randomValue;
             ball.Margin = margin;
             if (ball.Margin.Left < 10)
